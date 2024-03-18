@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kavivanar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign-Up-Form</title>
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="image-container">
+            <div class="logo">
+                <img src="Images/logo.png" alt="logo" height="100">
+                <h2>WHITE WATER CLUB</h2>
+            </div>
+            <img class="bg-img" src="Images/rafting.jpg" alt="image-rafting">
+            <div class="image-footer">
+                <p>Image by websiteproud from Pixabay</p>
+            </div>
+        </div>
+        <form action="#" method="POST">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Welcome to the White Water Club!</h1>
+                <p>At the white water club you will receive all information about white water rafting including: equipment, lessons, and safety.</p>
+                <p>We also offer all-included holidays at the ultimate white water rafting locations in the world.</p>
+                <br>
+                <p class="sign-up">Sign up for free!</p>
+            </div>
+            <div class="content">
+                <div class="input-box">
+                    <label for="firstName">First Name:</label>
+                    <input 
+                        type="text" 
+                        id="firstName"
+                        name="firstName" 
+                        minlength="2"
+                        title="First Name must be at least 2 characters"
+                        required>
+                </div>
+                <div class="input-box">
+                    <label for="lastName">Last Name:</label>
+                    <input 
+                        type="text"
+                        id="lastName" 
+                        name="lastName" 
+                        minlength="2"
+                        title="Last Name must be at least 2 characters"
+                        required>
+                </div>
+                <div class="input-box">
+                    <label for="email">Email:</label>
+                    <input 
+                        type="email" 
+                        id="email"
+                        name="email" 
+                        pattern="[a-zA-Z0-9._+-]+@[a-zA-Z0-9 -]+\.[a-z]{2,}" 
+                        title="Must be a valid email address"
+                        required>
+                </div>
+                <div class="input-box">
+                    <label for="phone">Phone Number:</label>
+                    <input 
+                        type="tel"
+                        id="phone" 
+                        name="phone"
+                        pattern="^\+(?:[0-9] ?){6,25}[0-9]$" placeholder="+XX XXXXXXXXX">
+                </div>
+                <div class="input-box error">
+                    <label for="password">Password:</label>
+                    <input 
+                        type="password" 
+                        id="password"
+                        name="password" 
+                        pattern="[a-zA-Z0-9]{8,}" 
+                        title="Password must contain at least 8 numbers"
+                        required>
+                    <small id="passwordMessage"></small>
+                </div>
+                <div class="input-box error">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input 
+                        type="password" 
+                        id="confirmPassword"
+                        name="confirmPassword" 
+                        required>
+                    <small id="confirmMessage"></small>
+                </div>
+            </div>
+            <div class="check-password">
+                <input type="checkbox" id="showPassword">
+                <label for="showPassword" class="showLabel">Show password</label>
+            </div>
+            <div class="button-container">
+                <button id="submit-btn" type="submit">Sign Up</button>
+                <p>Already have an account? <a href="#">Login</a></p>
+            </div>
+        </div>
+        </form>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
